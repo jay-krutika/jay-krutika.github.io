@@ -543,47 +543,69 @@ body.scroll-effects .scroll-entry:not(.in-view){opacity:0;transform:translateY(2
   background:#642338;color:#fff0cb;font-size:23px;cursor:pointer;box-shadow:0 3px 12px #32142655;
 }
 .music-toggle[aria-pressed="false"]{background:#f7e7c8;color:#642338}
-/* Light sunset colors for the invitation below the original courtyard. */
+/* Invitation tints sampled from the courtyard sky, bridge and stonework. */
 .invitation-content{
-  --sunset-gold:#ffdaa0;
-  --sunset-apricot:#f5bc9a;
-  --sunset-peach:#ffe4cf;
-  --sunset-rose:#f3c9cb;
-  --sunset-glow:#fff0dc;
-}
-.invitation-content{
+  --sunset-gold:#fed2a2;
+  --sunset-apricot:#fcccaa;
+  --sunset-peach:#fdddc3;
+  --sunset-clay:#f2c6b2;
+  --sunset-glow:#fee8cc;
+  --sunset-stone:#e5c9b6;
+  --sunset-mist:#eac9ba;
+  --sunset-ink:#5e3527;
   background:
-    radial-gradient(ellipse at 12% 35%,#ffe0a87a,transparent 56%),
-    linear-gradient(180deg,var(--sunset-apricot),var(--sunset-peach) 19%,var(--sunset-rose) 56%,var(--sunset-peach) 82%,var(--sunset-gold));
+    radial-gradient(ellipse at 12% 35%,#fed2a28c,transparent 56%),
+    linear-gradient(180deg,var(--sunset-apricot),var(--sunset-peach) 19%,var(--sunset-clay) 56%,var(--sunset-mist) 82%,var(--sunset-gold));
 }
 .invitation-content .scratch-section{
-  background:radial-gradient(ellipse at 50% 10%,#ffdcacde,transparent 74%);
+  background:radial-gradient(ellipse at 50% 10%,var(--sunset-gold),transparent 78%);
 }
 .invitation-content .sacred-page{
   background:radial-gradient(ellipse at 50% 38%,var(--sunset-glow),transparent 75%);
 }
 .invitation-content .invitation-card{
-  background:linear-gradient(150deg,var(--sunset-glow),#ffe2d3 75%,#f9d3cc);
+  background:linear-gradient(150deg,var(--sunset-glow),var(--sunset-peach) 72%,var(--sunset-clay));
+}
+.invitation-content .countdown-section{
+  color:var(--sunset-ink);
+  background:linear-gradient(130deg,var(--sunset-clay),var(--sunset-gold),var(--sunset-stone));
+}
+.invitation-content .countdown-section .eyebrow{color:var(--sunset-ink)}
+.invitation-content .countdown>div{
+  background:linear-gradient(150deg,var(--sunset-glow),var(--sunset-gold));
+  border-color:#a56436;
+}
+.invitation-content .countdown>div:nth-child(2n){
+  background:linear-gradient(150deg,var(--sunset-peach),var(--sunset-clay));
 }
 .invitation-content .royal-portraits{
-  background:radial-gradient(ellipse at 76% 45%,#ffdda783,transparent 75%);
+  background:radial-gradient(ellipse at 76% 45%,#fed2a28c,transparent 75%);
 }
 .invitation-content #celebrations{
-  background:radial-gradient(ellipse at 14% 24%,#ffdca280,transparent 61%);
+  background:radial-gradient(ellipse at 14% 24%,#fed2a28c,transparent 61%);
 }
+.invitation-content .event-banner{--scroll-gold:#9a5b32}
+.invitation-content .event-scroll-paper{
+  color:var(--sunset-ink);
+  background:linear-gradient(90deg,var(--sunset-clay),var(--sunset-glow) 25%,var(--sunset-glow) 75%,var(--sunset-clay));
+  box-shadow:inset 0 0 20px #ae502833;
+}
+.invitation-content .event-banner h4{text-shadow:none}
+.invitation-content .event-banner time{color:var(--sunset-ink)}
+.invitation-content .event-stamp{color:var(--sunset-ink)}
 .invitation-content .venue{
-  color:var(--ink);
-  background:linear-gradient(150deg,#ffe3b8,var(--sunset-peach) 48%,#edb9c0);
+  color:var(--sunset-ink);
+  background:linear-gradient(150deg,var(--sunset-gold),var(--sunset-peach) 48%,var(--sunset-stone));
   border:1px solid #b9815d66;
 }
 .invitation-content .venue .temple{color:#8e5c35}
-.invitation-content .venue .button{color:var(--wine);border-color:#9f6948}
+.invitation-content .venue .button{color:var(--sunset-ink);border-color:#9f6948}
 .invitation-content .venue .button:hover{color:var(--paper)}
 .invitation-content .family-section{
-  background:radial-gradient(ellipse at 82% 34%,#f4c9cb9e,transparent 72%);
+  background:radial-gradient(ellipse at 82% 34%,var(--sunset-stone),transparent 72%);
 }
-.invitation-content .family-section .family-intro{color:#704a3a}
-.invitation-content .family-section .family-greeting p{color:#704827}
+.invitation-content .family-section .family-intro,
+.invitation-content .family-section .family-greeting p{color:var(--sunset-ink)}
 </style></head><body class="locked"><div class="rose-fall" aria-hidden="true"></div>
 <audio id="invite-music" src="tenu-leke.mp3" preload="none" loop></audio>
 <button class="music-toggle" type="button" aria-pressed="false" aria-label="Background music" hidden>♪</button>
