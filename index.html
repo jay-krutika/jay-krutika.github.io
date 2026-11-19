@@ -219,11 +219,11 @@ html:not([lang=en]) .courtyard-names{font:inherit;font-size:clamp(35px,8vw,90px)
 main{max-width:none}
 .invitation-content{max-width:1000px;margin:auto}
 .sunset-courtyard{
-  min-height:100vh;min-height:100dvh;padding:0;overflow:hidden;isolation:isolate;color:#fff3d9;
+  min-height:100vh;min-height:100svh;padding:0;overflow:hidden;isolation:isolate;color:#fff3d9;
   background:radial-gradient(ellipse at 50% 42%,#d49256,#3b241b 78%);
 }
 .sunset-courtyard picture,.sunset-courtyard::after{position:absolute;inset:0;pointer-events:none}
-.sunset-courtyard img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 53%;transform:scale(1.025)}
+.sunset-courtyard img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 53%}
 .sunset-courtyard::after{
   content:'';background:
     radial-gradient(ellipse 62% 45% at 50% 17%,#3017108a,transparent 100%),
@@ -273,7 +273,6 @@ html:not([lang=en]) .courtyard-heading{font-family:inherit;font-size:clamp(30px,
   transform:translateY(-3px) rotate(45deg);
 }
 body.courtyard-revealed main{visibility:visible}
-.courtyard-revealed .sunset-courtyard img{transition:transform 3.3s cubic-bezier(.21,.56,.4,1);transform:scale(1.05)}
 .courtyard-revealed .courtyard-lockup,.courtyard-revealed .courtyard-welcome{opacity:1;transform:none}
 .courtyard-revealed .courtyard-scroll{opacity:1;transform:translate(-50%,0)}
 body.at-courtyard header{background:linear-gradient(#24150e8c,transparent);color:#fff3d9;border-color:transparent;backdrop-filter:none}
@@ -304,9 +303,8 @@ body.at-courtyard header nav button[aria-pressed=true]{background:#f4d39e26;colo
   100%{transform:translate(-50%,-52%) scale(5.2);opacity:0}
 }
 @media(prefers-reduced-motion:reduce){
-  #cover.palace-cover::before,.palace-door,.courtyard-revealed .sunset-courtyard img,.courtyard-lockup,.courtyard-welcome,.courtyard-scroll{transition:none}
+  #cover.palace-cover::before,.palace-door,.courtyard-lockup,.courtyard-welcome,.courtyard-scroll{transition:none}
   .opening .palace-stage{animation:none;visibility:hidden}
-  .courtyard-revealed .sunset-courtyard img{transform:none}
 }
 
 #cover.palace-cover{bottom:auto;height:100vh;height:100dvh;background:transparent}
